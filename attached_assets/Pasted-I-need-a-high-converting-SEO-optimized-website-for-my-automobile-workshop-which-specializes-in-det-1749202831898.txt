@@ -1,0 +1,55 @@
+I need a high-converting, SEO-optimized website for my automobile workshop, which specializes in detailing, repairs, and custom modifications.
+📌 GOALS:
+Showcase detailing, repairs, and modification services in a professional, modern way
+Drive more bookings and inquiries
+Be fast, responsive, and optimized for Google search performance
+✅ SITE STRUCTURE:
+1. Home Page
+Bold hero banner (with an image of workshop/car detailing/mods in action)
+Strong call-to-action: “Book Now” / “Get a Quote”
+Quick intro to services
+Customer testimonials or Google reviews
+Gallery or Instagram photo feed
+WhatsApp or floating contact button
+2. About Us
+Short story of the workshop
+Emphasis on trust, experience, and team
+Certifications or affiliations (if any)
+3. Services Page
+Divided into 3 key sections:
+Detailing: interior, exterior, paint correction, ceramic coating
+Repairs: diagnostics, mechanical, maintenance
+Modifications: engine tuning, body kits, performance upgrades
+Each should have:
+Short descriptions
+Icons or photos
+CTA buttons
+4. Portfolio / Gallery
+Before and after images
+Categorized view: Detailing | Repairs | Mods
+Option to expand images or view car-by-car
+5. Contact/Booking Page
+Simple contact form with dropdown for service type
+Embedded Google Map
+Contact details and operating hours
+Booking button or request form
+🎨 DESIGN STYLE:
+Dark, bold, and automotive-inspired design
+Use textures (carbon fiber, metal, gear elements subtly in background)
+Modern fonts with sharp edges, clean layout
+Bright, high-contrast CTA buttons
+Responsive on mobile, tablet, and desktop
+📈 TECH & PERFORMANCE:
+Fast loading, compressed images
+SEO-optimized: use schema markup, headings like
+“Auto Detailing in [City]”
+“Car Modifications [City]”
+“Vehicle Repairs Near Me”
+Meta tags and structured content
+Google Analytics & Search Console integration
+Optional blog space for SEO content
+🔄 EXTRAS:
+Google reviews plugin or carousel
+Instagram/Facebook auto-feed for recent work
+Sticky WhatsApp / Instant contact button
+Booking system (or external booking integration)

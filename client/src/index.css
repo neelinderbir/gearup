@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 240 10% 3.9%; /* #0A0A0A - Auto Black */
+  --foreground: 0 0% 98%; /* #FAFAFA - White */
+  --muted: 240 3.7% 15.9%; /* #2A2A2A - Auto Dark */
+  --muted-foreground: 240 5% 64.9%; /* #8B8B8B - Auto Silver */
+  --popover: 240 10% 3.9%; /* #0A0A0A - Auto Black */
+  --popover-foreground: 0 0% 98%; /* #FAFAFA - White */
+  --card: 0 0% 10.2%; /* #1A1A1A - Auto Charcoal */
+  --card-foreground: 0 0% 98%; /* #FAFAFA - White */
+  --border: 240 3.7% 15.9%; /* #2A2A2A - Auto Dark */
+  --input: 240 3.7% 15.9%; /* #2A2A2A - Auto Dark */
+  --primary: 14 100% 60%; /* #FF6B35 - Auto Orange */
+  --primary-foreground: 0 0% 98%; /* #FAFAFA - White */
+  --secondary: 240 3.7% 15.9%; /* #2A2A2A - Auto Dark */
+  --secondary-foreground: 0 0% 98%; /* #FAFAFA - White */
+  --accent: 196 100% 50%; /* #00D4FF - Auto Blue */
+  --accent-foreground: 240 10% 3.9%; /* #0A0A0A - Auto Black */
+  --destructive: 0 84.2% 60.2%; /* #EF4444 - Red */
+  --destructive-foreground: 0 0% 98%; /* #FAFAFA - White */
+  --ring: 14 100% 60%; /* #FF6B35 - Auto Orange */
+  --radius: 0.75rem;
+
+  /* Custom automotive colors */
+  --auto-black: 240 10% 3.9%; /* #0A0A0A */
+  --auto-charcoal: 0 0% 10.2%; /* #1A1A1A */
+  --auto-dark: 240 3.7% 15.9%; /* #2A2A2A */
+  --auto-medium: 0 0% 22.7%; /* #3A3A3A */
+  --auto-orange: 14 100% 60%; /* #FF6B35 */
+  --auto-blue: 196 100% 50%; /* #00D4FF */
+  --auto-silver: 240 5% 64.9%; /* #8B8B8B */
+}
+
+.dark {
+  --background: 240 10% 3.9%; /* #0A0A0A */
+  --foreground: 0 0% 98%; /* #FAFAFA */
+  --muted: 240 3.7% 15.9%; /* #2A2A2A */
+  --muted-foreground: 240 5% 64.9%; /* #8B8B8B */
+  --popover: 240 10% 3.9%; /* #0A0A0A */
+  --popover-foreground: 0 0% 98%; /* #FAFAFA */
+  --card: 0 0% 10.2%; /* #1A1A1A */
+  --card-foreground: 0 0% 98%; /* #FAFAFA */
+  --border: 240 3.7% 15.9%; /* #2A2A2A */
+  --input: 240 3.7% 15.9%; /* #2A2A2A */
+  --primary: 14 100% 60%; /* #FF6B35 */
+  --primary-foreground: 0 0% 98%; /* #FAFAFA */
+  --secondary: 240 3.7% 15.9%; /* #2A2A2A */
+  --secondary-foreground: 0 0% 98%; /* #FAFAFA */
+  --accent: 196 100% 50%; /* #00D4FF */
+  --accent-foreground: 240 10% 3.9%; /* #0A0A0A */
+  --destructive: 0 84.2% 60.2%; /* #EF4444 */
+  --destructive-foreground: 0 0% 98%; /* #FAFAFA */
+  --ring: 14 100% 60%; /* #FF6B35 */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-['Inter',_sans-serif] antialiased;
+    background-color: hsl(var(--auto-black));
+    color: hsl(var(--foreground));
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--auto-charcoal));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--auto-orange));
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--auto-orange) / 0.8);
+  }
+}
+
+@layer components {
+  /* Carbon fiber texture */
+  .carbon-fiber::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+      radial-gradient(circle at 25% 25%, hsl(var(--foreground) / 0.02) 2px, transparent 2px),
+      radial-gradient(circle at 75% 75%, hsl(var(--foreground) / 0.02) 2px, transparent 2px);
+    background-size: 30px 30px;
+    background-position: 0 0, 15px 15px;
+    pointer-events: none;
+  }
+
+  /* Metal texture */
+  .metal-texture::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+      linear-gradient(90deg, hsl(var(--foreground) / 0.02) 50%, transparent 50%),
+      linear-gradient(hsl(var(--foreground) / 0.02) 50%, transparent 50%);
+    background-size: 2px 2px;
+    pointer-events: none;
+  }
+
+  /* Hover effects */
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px hsl(var(--auto-orange) / 0.2);
+  }
+
+  /* Glass effect */
+  .glass-effect {
+    backdrop-filter: blur(10px);
+    background: hsl(var(--auto-charcoal) / 0.8);
+  }
+
+  /* Text shadow for better readability */
+  .text-shadow {
+    text-shadow: 2px 2px 4px hsl(var(--auto-black) / 0.8);
+  }
+
+  /* Custom button styles */
+  .btn-primary {
+    @apply bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground font-semibold px-6 py-3 rounded-lg transition-all duration-300;
+  }
+
+  /* Navigation active state */
+  .nav-link-active {
+    @apply text-primary;
+  }
+}
+
+@layer utilities {
+  /* Auto colors utilities */
+  .bg-auto-black {
+    background-color: hsl(var(--auto-black));
+  }
+
+  .bg-auto-charcoal {
+    background-color: hsl(var(--auto-charcoal));
+  }
+
+  .bg-auto-dark {
+    background-color: hsl(var(--auto-dark));
+  }
+
+  .bg-auto-medium {
+    background-color: hsl(var(--auto-medium));
+  }
+
+  .bg-auto-orange {
+    background-color: hsl(var(--auto-orange));
+  }
+
+  .bg-auto-blue {
+    background-color: hsl(var(--auto-blue));
+  }
+
+  .text-auto-orange {
+    color: hsl(var(--auto-orange));
+  }
+
+  .text-auto-blue {
+    color: hsl(var(--auto-blue));
+  }
+
+  .text-auto-silver {
+    color: hsl(var(--auto-silver));
+  }
+
+  .border-auto-orange {
+    border-color: hsl(var(--auto-orange));
+  }
+
+  .border-auto-blue {
+    border-color: hsl(var(--auto-blue));
+  }
+}
